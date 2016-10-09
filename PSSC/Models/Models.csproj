@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Models</RootNamespace>
     <AssemblyName>Models</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,7 +41,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Curs.cs" />
+    <Compile Include="CursFisa.cs" />
+    <Compile Include="CursOrar.cs" />
+    <Compile Include="Facultate.cs" />
+    <Compile Include="FisaMatricola.cs" />
+    <Compile Include="ICurs.cs" />
+    <Compile Include="ICursFisa.cs" />
+    <Compile Include="ICursOrar.cs" />
+    <Compile Include="IFacultate.cs" />
+    <Compile Include="IFisaMatricola.cs" />
+    <Compile Include="IOrar.cs" />
+    <Compile Include="IProfesor.cs" />
+    <Compile Include="ISectie.cs" />
+    <Compile Include="IStudent.cs" />
+    <Compile Include="IUniversitate.cs" />
+    <Compile Include="Orar.cs" />
+    <Compile Include="Profesor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sectie.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="Universitate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
