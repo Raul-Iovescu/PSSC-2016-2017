@@ -6,25 +6,24 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    class Profesor:Sectie,IProfesor
+    class Profesor
     {
-        TipTitlu titlu;
-        string nume_profesor;
-        public string Nume_profesor
+        string nume;
+        List<Curs> cursuri = new List<Curs>();
+        public string Nume
         {
-            get { return nume_profesor; }
-            set { nume_profesor = value; }
+            get { return nume; }
+            set { nume = value; }
         }
-        public TipTitlu Titlu
+        public Profesor(string nume, List<Curs> cursuri)
         {
-            get { return titlu; }
-            set { titlu = value; }
+            this.nume = nume;
+            this.cursuri = cursuri;
         }
-        public Profesor(string Nume_universitate,string Nume_facultate, string Nume_sectie,TipTitlu Titlu, string Nume_profesor):base(
-            Nume_universitate, Nume_facultate,  Nume_sectie)
+        public List<Curs> Cursuri
         {
-            nume_profesor = Nume_profesor;
-            titlu = Titlu;
+            get { return cursuri; }
+          
         }
     }
 }
