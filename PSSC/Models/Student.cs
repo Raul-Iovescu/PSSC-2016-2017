@@ -12,7 +12,6 @@ namespace Models
         int an_studiu;
         int nr_matricol;
         string cnp;
-        Nota nota;
         public string Nume
         {
             get { return nume; }

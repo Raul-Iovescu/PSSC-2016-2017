@@ -23,7 +23,7 @@ namespace Models
         int an_studiu;
         TipProportie tipProportie;
         TipCurs tipCurs;
-        List<Student> studenti = new List<Student>();
+        string id_curs;
         public string Nume
         {
             get { return nume; }
@@ -49,12 +49,17 @@ namespace Models
             get { return tipProportie; }
             set { tipProportie = value; }
         }
-        public Curs(string nume, int nr_credite, int an_studiu, TipCurs tipCurs, TipProportie tipProportie, List<Student> studenti)
+        public string IdCurs
         {
+            get { return id_curs; }
+            set { id_curs = value; }
+        }
+        public Curs(string id_curs, string nume, int nr_credite, int an_studiu, TipCurs tipCurs, TipProportie tipProportie)
+        {
+            this.id_curs = id_curs;
             this.nume = nume;
             this.nr_credite = nr_credite;
             this.an_studiu = an_studiu;
-            this.studenti = studenti;
             this.tipCurs = tipCurs;
             this.tipProportie = tipProportie;
         }
