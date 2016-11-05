@@ -1,13 +1,13 @@
 ﻿using Models.Generics;
-using Models.Subject;
+using Models.Contexts.Student;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace Models.Student
+using Models.Common;
+namespace Models.Contexts.Student
 {
     //Aggregate Root
     public class GradeReport

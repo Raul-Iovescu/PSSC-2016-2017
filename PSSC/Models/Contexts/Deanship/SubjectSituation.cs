@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models.Subject
+namespace Models.Contexts.Deanship
 {
     public class SubjectSituation
     {
@@ -44,10 +44,11 @@ namespace Models.Subject
         {
             Grade average;
 
-            if(type.Equals(EvaluationType.Distributed))
+            if (type.Equals(EvaluationType.Distributed))
             {
                 average = new Grade((ExamGrades[0].Value + ExamGrades[1].Value) / 2);
-            } else
+            }
+            else
             {
                 average = new Grade(ExamGrades[0].Value);
             }

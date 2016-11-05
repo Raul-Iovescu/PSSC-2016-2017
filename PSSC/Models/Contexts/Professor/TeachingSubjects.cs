@@ -6,15 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models.Professor
+namespace Models.Contexts.Professor
 {
     //Aggregate Root
     public class Subjects
     {
-        private List<Subject.Subject> _subjects;
-        public ReadOnlyCollection<Subject.Subject> AllSubjects { get { return _subjects.AsReadOnly(); } }
+        private List<Contexts.Professor.Subject> _subjects;
+        public ReadOnlyCollection<Contexts.Professor.Subject> AllSubjects { get { return _subjects.AsReadOnly(); } }
 
-        public Subjects(List<Subject.Subject> subjects)
+        public Subjects(List<Contexts.Professor.Subject> subjects)
         {
             _subjects = subjects;
         }

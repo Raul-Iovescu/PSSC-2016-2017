@@ -1,12 +1,13 @@
 ﻿using Models.Generics;
 
-namespace Models.Subject
+namespace Models.Common
+
 {
     public class SubjectInformation
     {
         public PlainText Name { get; internal set; }
         public Credits Credits { get; internal set; }
-        public Professor.Professor Professor { get; internal set; }
+        public Common.Professor Professor { get; internal set; }
         public Proportion ActivityProportion { get; internal set; }
         public EvaluationType Evaluation { get; internal set; }
 
@@ -23,20 +24,14 @@ namespace Models.Subject
             ActivityProportion = activity;
         }
 
-        public SubjectInformation(PlainText name, Credits credits, EvaluationType type, Proportion activity, Professor.Professor professor) 
+        public SubjectInformation(PlainText name, Credits credits, EvaluationType type, Proportion activity, Common.Professor professor) 
             : this(name, credits, type, activity)
         {
             Professor = professor;
         }
-
-        public void SetProfessor(Professor.Professor professor)
+        public void SetActivityProportion(Proportion activity)
         {
-            Professor = professor;
-        }
-
-        public void SetActivityProportion(Proportion proportion)
-        {
-            ActivityProportion = proportion;
+            ActivityProportion = activity;
         }
     }
 }

@@ -5,34 +5,35 @@ using System;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace Models.Subject
+using Models.Common;
+namespace Models.Contexts.Professor
 {
     //Entity
     public class Subject
     {
-        public SubjectInformation SubjectInfo { get; internal set; }
+        public Models.Common.SubjectInformation SubjectInfo { get; internal set; }
 
-        private Dictionary<Student.Student, SubjectSituation> _signedUpStudentsGrades;
-        public Dictionary<Student.Student, SubjectSituation> SignedUpStudentsGrades { get { return _signedUpStudentsGrades; } }
+        private Dictionary<Common.Student, SubjectSituation> _signedUpStudentsGrades;
+        public Dictionary<Common.Student, SubjectSituation> SignedUpStudentsGrades { get { return _signedUpStudentsGrades; } }
 
         public Subject()
         {
-            _signedUpStudentsGrades = new Dictionary<Student.Student, SubjectSituation>();
+            _signedUpStudentsGrades = new Dictionary<Common.Student, SubjectSituation>();
         }
 
-        public Subject(Dictionary<Student.Student, SubjectSituation> signedUpStudentsGrades, SubjectInformation subjectInfo)
+        public Subject(Dictionary<Common.Student, SubjectSituation> signedUpStudentsGrades, SubjectInformation subjectInfo)
         {
             _signedUpStudentsGrades = signedUpStudentsGrades;
             SubjectInfo = subjectInfo;
         }
 
-        public Subject(SubjectInformation subjectInfo) : this()
+        public Subject(SubjectInformation subjectInfo)
+            : this()
         {
             SubjectInfo = subjectInfo;
         }
 
-        public void SignUpStudent(Student.Student student)
+        public void SignUpStudent(Common.Student student)
         {
             _signedUpStudentsGrades.Add(student, new SubjectSituation());
         }
