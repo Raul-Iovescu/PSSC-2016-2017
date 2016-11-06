@@ -9,6 +9,7 @@ using Models.Common;
 namespace Models.Contexts.Deanship
 {
     //Entity
+    
     public class Subject
     {
         public Models.Common.SubjectInformation SubjectInfo { get; internal set; }

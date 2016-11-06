@@ -1,8 +1,8 @@
 ﻿using Models.Generics;
 
 namespace Models.Common
-
 {
+    /*Clasa Subiect care e generala in toate cele 3 contextele*/
     public class SubjectInformation
     {
         public PlainText Name { get; internal set; }

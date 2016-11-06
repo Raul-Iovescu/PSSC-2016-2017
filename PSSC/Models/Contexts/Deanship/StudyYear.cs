@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Models.Contexts.Deanship
 {
-    //Aggregate Root
+    //Aggregate Root al contextului Decanat. Sunt implementate toate optiunile ce poate sa le faca decanatul
     public class StudyYear
     {
         private List<Subject> _definedSubjects;

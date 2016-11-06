@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Models.Contexts.Professor
 {
-    //Aggregate Root
+    //Aggregate Root al Profesorului cu toate optiunile pe care poate sa le faca acesta
     public class Subjects
     {
         private List<Contexts.Professor.Subject> _subjects;

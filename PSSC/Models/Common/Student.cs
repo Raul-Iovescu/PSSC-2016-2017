@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace Models.Common
 {
     //Entity
+    /*Clasa Student care e generala in toate cele 3 contextele*/
     public class Student
     {
         public RegistrationNumber RegNumber { get; internal set; }

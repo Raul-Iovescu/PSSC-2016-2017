@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Models.Common;
 namespace Models.Contexts.Student
 {
-    //Aggregate Root
+    //Aggregate Root al Stundentului. Studentul are acces doar la vizualizarea mediei sale
     public class GradeReport
     {
         private ReadOnlyCollection<KeyValuePair<SubjectInformation, SubjectSituation>> _gradeReport;
